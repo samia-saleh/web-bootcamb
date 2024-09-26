@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-wrapper>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+    
+
+        .grid-wrapper {
+            display: grid;
+            grid-gap: 10px;
+            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));    */
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+             /* grid-template-columns:  130px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px ; */
+            /* border: 1px solid gray; */
+            grid-auto-rows: 50px;
+            grid-auto-flow: dense;
+            text-align: center;
+            /* margin: 10px; */
+            /* padding: 10px; */
+            /* background-color:#e6d9d9 ; */
+            background-color:#ececec ;
+            /* column-gap: 20px; */
+            border-top: 0.5px solid #cadabd;
+           
+            
+           
+        }
+
+        .firstrow{
+            position: absolute;
+            top:25%;
+            left: 31.8%;
+            background-color: rgb(125, 207, 159);
+            margin-top: 10px;
+            height: 30px;
+            width: 655px;
+            grid-column: 7 /span 2;
+          
+            border-radius: 20px;
+        }
+        .thirdrow{
+             position: absolute;
+            top:40%;
+            left: 25.7%;
+            background-color:  rgb(125, 207, 159);
+            margin-top: 10px;
+            height: 30px;
+            width: 245px;
+            border-radius: 20px;
+
+        }
+        .forthdrow{
+              position: absolute;
+            top:48%;
+            left: 19.5%;
+            height: 30px;
+            width: 410px;
+            /* linear-gradient:(blue 10%,red 10%); */
+            background-color: #f76253;
+            border-radius: 20px;
+
+        }
+        .forthdrowsecondlin{
+             position: absolute;
+            top:48%;
+            left: 56%;
+          
+            height: 30px;
+            width: 331px;
+            grid-column: 7 /span 4;
+            background-color:  #3bc6ca;
+            border-radius: 20px;
+
+        }
+        .thirdrowspan{
+            grid-row: 4/ span 2;
+            grid-template-rows: 90px;
+        }
+        .seventhrow{
+            position: absolute;
+            top:72%;
+            left: 25.7%;
+            height: 30px;
+            width: 245px;
+            
+            background-color:   rgb(125, 207, 159);
+            border-radius: 20px;
+            /* margin-top: 10px;
+            height: 30px;
+            position: absolute;
+            top:50%;
+            left: 15%;
+            grid-column: 3 /span 3;
+            background-color: green;
+            border-radius: 20px; */
+        }
+        .eigthrow{
+            height: 30px;
+            width: 408px;
+
+            background-color: #3bc6ca;
+            border-radius: 20px;
+            position: absolute;
+            top:80%;
+            left: 31.9%;
+           
+            
+            border-radius: 20px;
+        }
+        .ninthrow{
+            height: 30px;
+            text-align: start;
+            background-color: #f76253;
+            border-radius: 20px;
+            position: absolute;
+            top:88%;
+            left: 31.9%;
+            width: 490px;
+
+        }
+        .mounthrow{
+            background-color:#0e3342;
+            text-align: center;
+            
+        }
+        .mounthrow p{
+            color: white;
+        }
+        .firstrow p,.thirdrow p,.forthdrowsecondlin p,.seventhrow p,.eigthrow p,.ninthrow p,.forthdrow p{
+            
+           
+            color: white;
+            
+            
+           
+        }
+        
+        .firstrow p{
+            margin-left: -490px;
+        }
+      .seventhrow p,.eigthrow p,.ninthrow p,.forthdrow p{
+            margin-left: -300px;
+          
+        }
+        .ninthrow p{
+            margin-left: -400px;
+        }
+        .thirdrow p{
+            margin-left: -150px;
+
+        }
+        .forthdrowsecondlin p{
+            margin-left: -250px;
+        }
+
+        
+       
+        body{
+            padding: 100px;
+            background-color: #cadabd;
+        }
+        .mountgrid{
+            grid-column: 1;
+            padding-right: 50px;
+        }
+        /* div >div p{
+            padding: 0px;
+            margin: 20px; 
+        } */
+        h5{
+            color: white;
+            
+        }
+        .border{
+            border-left: 1px solid #cadabd;
+        }
+     
+        .grid-wrapper:first-child{
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+        }
+        .grid-wrapper:last-child{
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="grid-wrapper mounthrow">
+    <div class="mountgrid">
+         <h5></h5>
+    </div>
+    <div class="border">
+        <h5>Jan</h5>
+    </div>
+  
+    <div class="border">
+        <h5>Feb</h5>
+    </div>
+    <div class="border">
+        <h5>Mar</h5>
+    </div>
+    <div class="border">
+        <h5>Apr</h5>
+    </div>
+    <div class="border">
+        <h5>May</h5>
+    </div>
+    <div class="border">
+        <h5>Jun</h5>
+    </div>
+    <div class="border">
+        <h5>Jul</h5>
+    </div>
+    <div class="border">
+        <h5>Aug</h5>
+    </div>
+    <div class="border">
+        <h5>Sep</h5>
+    </div>
+    <div class="border">
+        <h5>Oct</h5>
+    </div>
+    <div class="border">
+        <h5>Nov</h5>
+    </div>
+    <div class="border">
+        <h5>Dec</h5>
+    </div>
+   
+
+</div>
+<div  class="grid-wrapper ">
+    <div>
+        <p>Barnar dPosselt</p>
+    </div>
+ 
+    <div class="border">
+        
+    </div>
+  
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+      
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class=" firstrow ">
+        <p>even longer project</p>
+    </div>
+    
+    
+  
+    
+    </div>
+   
+
+
+<div style="background-color: coral;" class="grid-wrapper">
+    <div class=" ">
+        <p>Ryley Huggons</p>
+    </div>
+    
+   
+ 
+   
+
+</div>
+<div class="grid-wrapper thirdrowspan ">
+    <div class="">
+        <p>Lanie Erwin</p>
+    </div>
+    <div class="border ">
+        
+    </div>
+  
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+      
+    </div>
+    <div class="border">
+      
+    </div>
+
+
+     <div class=" thirdrow ">
+        <p>Start FEB🙌</p>
+    </div>
+     <div class=" forthdrow">
+       
+    </div>
+    <div class="forthdrowsecondlin">
+        <p>Same Line</p>
+    </div>
+   
+
+</div>
+<div style="background-color: coral;" class="grid-wrapper">
+    <div class="">
+        <p>Krishnah Pauleit</p>
+    </div>
+
+       
+    </div>
+   
+   
+
+</div>
+<div  style="background-color: coral;" class="grid-wrapper">
+    <div class="">
+        <p> Hobard Lampitt</p>
+    </div>
+    
+
+   
+
+</div>
+<div class="grid-wrapper">
+    <div class="">
+        <p>Virgilio Jeanes</p>
+    </div>
+    <div class="border">
+        
+    </div>
+  
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+      
+    </div>
+    <div class="border">
+       
+    </div>
+  
+  
+    <div class=" seventhrow">
+        <p></p>
+    </div>
+  
+
+</div>
+<div class="grid-wrapper">
+    <div class="">
+        <p>KyVerick</p>
+    </div>
+    <div class="border">
+        
+    </div>
+  
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+      
+    </div>
+    <div class="border">
+       
+    </div>
+  
+  
+  
+    <div class=" eigthrow">
+        <p>long project</p>
+    </div> 
+    
+   
+
+</div>
+<div class="grid-wrapper">
+    <div class="">
+        <p>Kitti Waterworth</p>
+    </div>
+    <div class="border">
+        
+    </div>
+  
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+        
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+       
+    </div>
+    <div class="border">
+      
+    </div>
+    <div class="border">
+       
+    </div>
+
+    <div class=" ninthrow">
+        <p>A titel</p>
+    </div> 
+   
+
+</div>
+</body>
+</html>

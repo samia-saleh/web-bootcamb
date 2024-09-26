@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+           
+        }
+        .container{
+            background-color: rgb(163, 158, 158);
+            display: flex;
+            flex-direction: row;
+            padding: 20%;
+            position: relative;
+           opacity: 0.7;
+           justify-content: space-between;
+        }
+        .showimg{
+            height: 300px;
+            width: 300;
+            background-color: rgba(255, 255, 255, 0.582);
+            border-radius: 50%;
+            padding: 50px;
+            position: absolute;
+            top: 30%;
+            left: 35%;
+        }
+        button{
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:55%;
+            border: none;
+            z-index: 5;
+        }
+        button:first-of-type{
+            left: 33%;
+        }
+        button:last-of-type{
+            left: 63%;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+        <img src="Yoshi.png" id="leftimg">
+           
+       
+        <img src="MarioAndLuigi.png" id="rigthimg">
+
+    </div>
+    <button onclick="backward()">
+        ‹ 
+    </button>
+
+
+<button  onclick="forward()">
+    ›
+</button>
+    <div class="showimg">
+        <img src="MarioAndLuigiInCar.png" id="img">
+       </div>
+       <script>
+        let indx=0;
+        let  rigthimgindx=1;
+       
+        let pic=["MarioAndLuigiInCar.png","MarioAndLuigi.png","luigi.png","supermario.png","Yoshi.png"]
+        function forward(){
+            
+           
+            
+            if(indx==pic.length-1){
+               
+                indx=0;
+                document.getElementById("img").src=pic[indx]
+                document.getElementById("leftimg").src=pic[4]
+
+            }
+            else{
+                document.getElementById("leftimg").src=pic[indx]
+                document.getElementById("img").src=pic[indx+1]
+                indx+=1;
+            }
+            if(rigthimgindx==pic.length-1)
+            {
+              
+                
+               document.getElementById("rigthimg").src=pic[0]
+               rigthimgindx=0;
+            }
+           else{
+            document.getElementById("rigthimg").src=pic[rigthimgindx+1]
+           rigthimgindx+=1;
+           }
+
+        }
+        
+        let  rigthimgindx2=1;
+        let indx2=pic.length-1
+        let leftimgindx=pic.length-2;
+        function backward(){
+            if(indx2==0){
+               
+                  document.getElementById("rigthimg").src=pic[1]
+               document.getElementById("img").src=pic[indx2]
+               indx2=pic.length-1
+                 rigthimgindx=1
+           }
+           else{
+               document.getElementById("img").src=pic[indx2]
+                document.getElementById("rigthimg").src=pic[rigthimgindx2-1]
+                rigthimgindx2=indx2+1
+               indx2-=1;
+           }
+           if(leftimgindx<0)
+           {
+             
+             
+               leftimgindx=pic.length-2;
+               document.getElementById("leftimg").src=pic[4]
+           }
+          else{
+           document.getElementById("leftimg").src=pic[leftimgindx]
+           leftimgindx-=1;
+          }
+        }
+       </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- our project just needs Font Awesome Solid + Brands -->
+    <link href="challenges/fontawesome-free-6.4.2-web/css/fontawesome.css" rel="stylesheet">
+    <link href="challenges/fontawesome-free-6.4.2-web/css/brands.css" rel="stylesheet">
+    <link href="challenges/fontawesome-free-6.4.2-web/css/solid.css" rel="stylesheet">
+    <!-- -->
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       .container{
+        width: 250px;
+        position: relative;
+        /* padding: 10px; */
+        background-color: white;
+        text-align: center;
+        border-radius: 20px;
+        
+
+
+        }
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 20px;
+
+            
+
+        }
+        .blok{
+            display: flex;
+            flex-direction: row;
+            border-radius: 20px;
+            box-shadow: 1px 1px 10px gray;
+            /* padding: 10px; */
+            position: relative;
+            padding: 20px;
+            /* width: 100%; */
+
+            
+        }
+        .songs{
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            position: relative;
+            /* padding: 20px; */
+            text-align: start;
+        }
+       .time{
+           position: absolute;
+           right: 10px;
+        }
+        .imgdiv{
+           display: inline;
+           margin-right: 10px;
+        }
+        .content{
+            position: absolute;
+            left: 30%;
+            top: 15%;
+            padding: 10px;
+            
+        }
+        .content>h5{
+            display: inline;
+            margin: 10px;
+            font-size: px;
+            
+        }
+        label{
+           color: rgb(90, 87, 87);
+           font-size: 11px;
+            
+        }
+        /* .content>label{
+           
+        } */
+        h4{
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+      
+        body{
+            background-color: skyblue;
+            padding: 20% 40%;
+        }
+        .songs>div>label{
+            margin-left: 10px;
+        }
+        hr{
+            width: 90%;
+            margin-left: 10px;
+        }
+        .line{
+            width: 150px;
+            height: 5px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+        .labl{
+            color: red;
+        }
+        button{
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border: none;
+        }
+        @keyframes marq{
+            /* 0%{
+                left: 0%;
+            }
+            25%{
+                left: 20%;
+            }
+            50%{
+                left: 40%;
+            }
+            100%{
+                left: 80%;
+            } */
+            from{
+                left: 0%;
+            }
+            to{
+                left: 60%;
+                opacity: 0px;
+            }
+        }
+        .mrqu{
+            animation-name: marq;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            left: 0%;
+          
+            
+
+
+        }
+        button:last-child{
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blok">
+           <div class="imgdiv"> <img src="lavendat.jpg"  id="img"></div>
+           
+         <div class="content">
+            <i class="fa fa-step-backward"></i>
+            <h5 id="h5">
+                Bless You
+            </h5>
+            
+            <i class="fa fa-step-forward"></i>
+            <br>
+
+            <label id="l1" class="mrqu">Driving</label>
+            <br>
+            <div class="line"></div>
+         </div>
+        </div>
+        
+ <button onclick="change1()">
+    <div class="songs" >
+        <div>
+            <img src="lavendat.jpg">
+        </div>
+        <div>
+            <h4>
+                Talking to the ...
+            </h4>
+            <label >
+                Sickick
+            </label>
+            <label class="time">
+                01:55
+            </label>
+        </div>
+     </div>
+ </button>
+         <hr>
+         <button onclick="change2()">
+            <div class="songs">
+                <div>
+                    <img src="skyn.jpeg">
+                </div>
+                <div>
+                    <h4>
+                       Driving
+                    </h4>
+                    <label>
+                       Bless You
+                    </label>
+                    <label class="time">
+                        03:02
+                    </label>
+                </div>
+             </div>
+         </button>
+         <hr>
+         <button onclick="change3()">
+         <div class="songs">
+            <div>
+                <img src="car.jpg">
+            </div>
+            <div>
+                <h4>
+                  Demon Hiigh
+                </h4>
+                <label>
+                   Lil Uzi Vert
+                </label>
+                <label class="time">
+                  03:17
+                </label>
+            </div>
+         </div></button>
+         
+        
+    </div>
+    <script>
+        
+        let btn1={h:"Talking to the ..." ,labl:"Sickick",img:"lavendat.jpg"}
+        function change1(){
+       let l=document.getElementById("l1");
+        l.innerHTML=btn1.labl
+        let h=document.getElementById("h5");
+        h.innerHTML=btn1.h
+        document.getElementById("img").src=btn1.img;
+       document.body.style.backgroundColor="skyblue"
+        
+        }
+        let btn2={h:"Driving" ,labl:" Bless You",img:"skyn.jpeg"}
+        function change2(){
+       let l=document.getElementById("l1");
+        l.innerHTML=btn2.labl
+        let h=document.getElementById("h5");
+        h.innerHTML=btn2.h
+        document.getElementById("img").src=btn2.img;
+        document.body.style.backgroundColor="yellow"
+        }
+        let btn3={h:" Demon Hiigh" ,labl:" Lil Uzi Vert",img:"car.jpg"}
+        function change3(){
+       let l=document.getElementById("l1");
+        l.innerHTML=btn3.labl
+        let h=document.getElementById("h5");
+        h.innerHTML=btn3.h
+        document.getElementById("img").src=btn3.img;
+         document.body.style.backgroundColor="limegreen"
+        }
+    </script>
+</body>
+</html>

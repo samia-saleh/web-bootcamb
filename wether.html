@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.js">
+    
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            color: white;
+        }
+        .div{
+            height: 300px;
+            width: 350px;
+            padding: 30px 10px;
+            border-radius: 20px;
+            background-color:#5e80af49;
+            text-align: center;
+            display: inline-block;
+            margin: 40px;
+        }
+        img{
+            height: 90px;
+            width: 80px;
+            margin: 40px;
+        } 
+   
+     
+        body>div:nth-of-type(2)>div>img{
+           
+           
+            margin: 40px 0px;
+        }
+        body>div:nth-of-type(2){
+           
+          display: flex;
+          border-radius: 10px;
+          border: 1px solid white;
+          
+         
+       }
+  
+        body{
+            padding: 3% 10%;
+            
+           background: linear-gradient(to left ,#669fb0,#7bbc84,#5e80af);
+           
+        }
+        h1{
+            margin-left: 100px;
+            padding-left: 100px;
+            color: white;
+           
+        }
+        label{
+            font-size: 13px;
+        }
+        .flex>div{
+          
+            border-left: 1px solid white;
+            
+        }
+        body>div:nth-of-type(2)>div:first-of-type{
+         
+            border-left:none;
+            
+        }
+        h5,h4{
+            font-size: 16px;
+            margin-right: 5px;
+        }
+        .flex{
+            display: flex;
+            border: 1px solid white;
+            border-radius:10px  ;
+            justify-content: space-evenly;
+            padding: 20px 0px;
+            width: 850px;
+            background: linear-gradient(to left ,#669fb060,#7bbc843f,#5e80af34);
+            
+            
+        }
+        .flex>div{
+            text-align: center;
+            padding: 20px;
+            
+
+        }
+        span{
+            font-size: 14px;
+           
+        }
+        h5{
+          
+           font-size: 16px;
+        }
+        div>h6{
+            font-size: 13px;
+           padding-left: 15px;
+
+        }
+    </style>
+</head>
+<body >
+    <h1>
+        WEATHER TEMPLARE</h1>
+ <div class="row">
+
+<div class="div col-2">
+    <h4>LOCAL WEATHER REPORT</h4>
+    <hr>
+   
+<div class="row">
+    <img src="Forecast/sun.png" class="col">
+  <div class="col">
+    <h5 class="row">
+
+    </h5>
+      
+     <h6  class="row">
+
+     </h6>
+  </div>
+</div>
+   <div class="row">
+ <div class="col">
+    <span >
+        KM/H SW
+    </span>
+ </div>
+   
+  <div class="col">
+    <label>
+        
+    </label>
+    <br>
+    <p>
+       
+    </p>
+  </div>
+   </div>
+
+</div>
+ 
+ <div class="div col-2">
+
+<span>
+    WIND SPEED (KNOTS).......................................13
+</span>
+<br><br>
+<span>
+    WIND GUSTS (KNOTS)........................................14
+</span>
+<br><br>
+<span>
+    WIND DIRECTION .............................................SW
+</span>
+<br><br>
+<span>
+    WAVE (M)...............................................................2.2
+</span>
+<br><br>
+<span>
+    WAVE DIRECTION................................................SW
+</span>
+<br><br>
+<span>
+   CLOUD COVER (%)...............................................-
+</span>
+
+
+
+
+</div> 
+ </div>
+ <div class=" flex">
+<div >
+   <h4>
+    MONDAY
+   </h4>
+    <br>
+    <img src="">
+    <br>
+    <label>
+      
+    </label>
+    <br>
+   <p> </p>
+</div>
+<div >
+    <h4>
+        TUSEDAY
+       </h4>
+    <br>
+    <img src="">
+    <br>
+    <label>
+       
+    </label>
+    <br>
+    <p> </p>
+</div>
+<div >
+    <h4>
+       WEDNESDAY
+       </h4>
+    <br>
+    <img src="">
+    <br>
+    <label>
+       
+    </label>
+    <br>
+    <p> </p>
+</div>
+<div >
+    <h4>
+        THERSDAY
+       </h4>
+    <br>
+    <img src="">
+    <br>
+    <label>
+       
+    </label>
+    <br>
+    <p></p>
+</div>
+<div >
+    <h4>
+        FRIDAY
+       </h4>
+    <br>
+    <img src="">
+    <br>
+    <label>
+       
+    </label>
+    <br>
+    <p> </p>
+</div>
+<div>
+    <h4>
+        SATERDAY
+       </h4>
+    <br>
+    <img src="">
+    <br>
+    <label>
+       
+    </label>
+    <br>
+    <p> </p>
+</div>
+
+
+ </div>
+<script>
+    let days=["SUNDAY","MONDAY","TUSEDAY","WEDNESDAY","THERSDAY","FRIDAY","SATERDAY"]
+    let imgs=["Forecast/SunCloud.png","Forecast/rain.png","Forecast/RainThunder.png","Forecast/Snow.png",
+    "Forecast/sun.png","Forecast/Cloud.png"]
+    let status=["SUNNY","CLOUDY","RAINNY"]
+    let images=document.getElementsByTagName("img")
+    let labls=document.getElementsByTagName("label")
+    let para=document.getElementsByTagName("p");
+    document.getElementsByTagName("h5")[0].innerHTML=days[Math.floor(Math.random()*days.length)]
+    document.getElementsByTagName("h6")[0].innerHTML=status[Math.floor(Math.random()*status.length)]
+    for(let i in images ){
+        images[i].src=imgs[Math.floor(Math.random()*imgs.length)];
+        }
+        for(let i in para ){
+            para[i].innerHTML=Math.floor(Math.random()*100)+" ْ F"; 
+        }
+        for(let i in labls ){
+            labls[i].innerHTML=Math.floor(Math.random()*50)+" ْ C";
+        }
+       
+</script>
+</body>
+</html>

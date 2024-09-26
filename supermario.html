@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yallowdiv{
+            position: absolute;
+            height: 120px;
+            width: 300px;
+            background-color:yellow;
+           border-top-right-radius: 20px;
+           border-top-left-radius: 20px;
+           top: -20%;
+           overflow: hidden;
+          padding-top: 100px;
+           transform: rotate(-30deg) scale(2,1.5);
+           
+          
+        }
+        .container:hover .yallowdiv{
+            transform: rotate(30deg) scale(2,1.5);
+            transition-delay: 7s;
+            top: -30%;
+            transition: top;
+            transition: 1s;
+        }
+        .yallowdiv{
+            top: -20%;
+           overflow: hidden;
+          padding-top: 100px;
+           transform: rotate(-30deg) scale(2,1.5);
+           
+            transition:1s;
+         
+        }
+        .line{
+            height:100px;
+            width: 300px;
+            /* transform: rotate(30deg); */
+            background-color: red;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+            top: 40px;
+            left: 15%;
+
+        }
+        p{
+            position: absolute;
+            
+            color: white;
+            font-size: 20px;
+            
+        }
+        .p1{
+            bottom: 20%;
+            left: 25%
+        }
+        .p2{
+            bottom: 15%;
+            left: 35%
+        }
+        .container{
+            background-color: black;
+            height: 450px;
+            width: 300px;
+            position: relative;
+            border-radius: 20px;
+            text-align: center;
+            overflow: hidden;
+
+        }
+        .button1{
+            background-color: yellow;
+            position: absolute;
+            bottom: 10%;
+            left: 30%;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            display: none;
+        }
+        .container:hover button{
+            display: block;
+
+        }
+        .P3{
+           position: absolute;
+           font-size: 90PX;
+           opacity: 0.1;
+           bottom: -10%;
+            
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="yallowdiv">
+
+        </div>
+       
+       <div id="d1">
+        <img src="Mario.png" id="img">
+        
+       </div>
+       <p class="p1" id="p1">
+        SUPER MARIO
+       </p>
+       <p class="p2" id="p2">
+        61.98
+       </p>
+       <button class="button1" id="b1">BUY NOW</button>
+      
+       <p class="P3">MARIO</p>
+
+
+    </div>
+    <!-- <script>
+        let product={name:"mario game",price:"234$"};
+        document.getElementById("p1").innerHTML=product.name;
+        document.getElementById("p2").innerHTML=product.price;
+         x ="lavendat.jpg"
+        document.getElementById("img").src=x;
+    let btn =document.getElementById("b1")
+    btn.onclick=function(){
+     
+
+    }
+
+    </script> -->
+    <!-- <button onclick="a()" class="button1" id="b1">BUY NOW</button>
+    <script>
+        let product={name:"mario game",price:"234$"};
+        document.getElementById("p1").innerHTML=product.name;
+        document.getElementById("p2").innerHTML=product.price;
+         x ="lavendat.jpg"
+        document.getElementById("img").src=x;
+    let btn =document.getElementById("b1")
+    function a(){
+        window.alert("price="+product.price)
+     
+
+    };
+
+    </script> -->
+</body>
+</html>

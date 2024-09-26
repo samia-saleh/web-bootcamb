@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery.js"></script>
+   
+    <style>
+        *{
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+        }
+        body{
+            padding: 10% 15% ;
+            background-color: #EFEDDF;
+        }
+        button:first-of-type{
+           height: 75px;
+           padding:29px 15px 30px 15px;
+           border-color: orangered;
+           background-color: orangered;
+           color: white;
+           font-size: 20px;
+           box-shadow: 1px 1px 5px black;
+        }
+        input{
+            height: 70px;
+            width: 700px;
+            outline: 1px solid gray;
+           
+        }
+      
+        input:focus{
+           border: none;
+            outline: 3px solid orangered;
+           
+        }
+        input,button:first-of-type{
+            margin-bottom: 50px;
+        }
+        #container{
+            display: flex;
+            width: 900px;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 400px;
+            height: 50px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-top: 7px solid rgb(15, 212, 153);
+            text-decoration: none;
+            /* position: absolute; */
+            animation-name: moveitem;
+            animation-duration: 2s;
+            
+          
+            
+            
+
+        }
+        @keyframes moveitem{
+            from{
+                transform: translateY(200px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+        .item:hover{
+            border-top-color:orangered ;
+        }
+        p{
+          position: relative;
+          bottom:  30%;
+        }
+        label{
+            margin-left: 300px;
+            
+        }
+        hr{
+            margin-right: 60px;
+        }
+        button:last-of-type{
+            font-size: 14px;
+            padding: 10px;
+            margin-left: 350px;
+            
+            color: white;
+            background-color: gray;
+            border: none;
+        }
+        label:first-of-type,hr,button:last-of-type{
+            display: none;
+        }
+        .icon{
+            margin-left: 300px;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+        }
+        i{
+            color: red;
+            animation-name: bel;
+            animation-duration: 1.1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            
+        }
+        @keyframes bel{
+            from{
+                transform: rotate(10deg);
+            }
+            to{
+                transform: rotate(-10deg);
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    
+    
+    <input type="text" placeholder="INSERT YOUR LIST ITEM HERE">
+    <button onclick="additem()">CREATE LIST</button>
+    <label>TODAYS TASKS</label>
+    <hr>
+    <label>NO LIST YET</label>
+    <div class="icon"><img src="list.png"></div>
+  <div id="container">
+   
+  </div>
+  <!-- <i class="fa fa-bell"></i> -->
+  <button>
+    CLEAR ALL TASKS
+  </button>
+    <script>
+        let stat=true
+         $(function(){
+            $('button').eq(0).click(function(){
+            $('label').eq(1).css('display','none') 
+            $('img').eq(0).css('display','none') 
+            
+            let inptvalue=$('input').eq(0).val() 
+            if(inptvalue==''){
+                alert("Please enter a task")
+            }
+            else{
+                $('#container').append(`<a class="item " href="#"><p id="para">${inptvalue}</p></a>`)
+                $('input').eq(0).val("")
+                
+            }
+            $('button').eq(1).css('display','block') 
+            $('label').eq(0).css('display','block') 
+            $('hr').eq(0).css('display','block') 
+            $('button').eq(1).click(function(){
+                $('.item').css('display','none')
+                $('label').eq(1).css('display','block') 
+            $('img').eq(0).css('display','block') 
+            $('button').eq(1).css('display','none') 
+            $('label').eq(0).css('display','none') 
+            $('hr').eq(0).css('display','none') 
+            
+            })
+            $('a').click(function(){
+                if(stat){
+                    $(this).css('text-decoration', 'line-through')
+                    stat=false
+
+                }
+                else{
+                    $(this).css('text-decoration', 'none')
+                    stat=true
+
+                }
+               
+
+            })  
+            $('a').dblclick(function(){
+                $(this).css('display','none')
+
+            })      
+            
+        })
+         })
+      
+       
+    
+        
+     
+
+
+
+
+   
+    </script>
+</body>
+</html>

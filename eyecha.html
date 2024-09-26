@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* *{
+            margin: 0px;
+            padding: 0px;
+        } */
+        img{
+            height: 140px;
+            width: 135px;
+        }
+        input{
+           padding: 3px;
+        }
+        .button{
+            margin-left:-10px ;
+            background-color: black;
+            border: none;
+            padding: 5px;
+            color: white;
+        }
+        .contaner{
+            margin-left: 40%;
+            margin-top: 10%;
+        }
+        .passworddiv{
+            background-color: white;
+            border: 1px solid black;
+            width: 230px;
+            padding: 20px;
+        }
+   
+
+    </style>
+</head>
+<body>
+   <div class="contaner">
+    <img src="closedeye.png" id="pic1"><img src="closedeye.png" id="pic2">
+    <div class="passworddiv" >
+        <label>Password</label>
+        <br>
+    
+        <input type="password" id="input1">
+        <input class="button" type="button"  id="b1" onclick="show()" value="SHOW">
+        <!-- <button id="b1" onclick="mne()">SHOW</button> -->
+    </div>
+   </div>
+   <script>
+    
+    // let btn=document.getElementById("buttn1").type;
+    // let inpt=document.getElementById("input1");
+    let p={btntext:"HIDE",btntyp:"text",img1:"opendeye.png"};
+    let h={btntext:"SHOW",btntyp:"password",img1:"closedeye.png"};
+   
+
+    let btn=document.getElementById("b1")
+    
+         function show(){
+           if( document.getElementById("b1").value==h.btntext){
+            document.getElementById("b1").value=p.btntext;
+    document.getElementById("input1").type=p.btntyp;
+    document.getElementById("pic1").src=p.img1;
+    document.getElementById("pic2").src=p.img1;
+        }
+        else{
+            document.getElementById("b1").value=h.btntext;
+    document.getElementById("input1").type=h.btntyp;
+    document.getElementById("pic1").src=h.img1;
+    document.getElementById("pic2").src=h.img1;
+           };
+           }
+       
+          
+       
+
+   </script>
+</body>
+</html>
